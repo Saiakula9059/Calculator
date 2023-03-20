@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><title>Document</title>
+    <style>
+        body{
+            background-image: linear-gradient(rgb(254, 98, 124),rgb(70, 3, 70));
+            background-repeat: no-repeat;
+            background-size: 100% 100ch;
+
+        }
+        #container{
+            position: relative;
+            left: 550px;
+            top: 180px;
+            height: 350px;
+            width: 350px;
+            background-color: rgba(255, 255, 255, 0.239);
+            border-radius: 5px;
+            z-index: 3;
+        }
+        #topbox{
+            width: 280px;
+            height: 25px;
+            margin-left: 15px;
+            position: absolute;
+            top: 15px;
+            color:red;
+            font-weight: bold;
+            font-size: 18px;
+            left: 20px;
+            border-radius: 5px;
+            border: none;
+            transition: 1s;
+        }
+        #topbox:hover{
+            background-color: rgb(174, 103, 240); 
+
+        }
+        .but{
+            position: relative;
+            top: 30px;
+            left: 25px;
+            width: 55px;
+            height: 30px;
+            color: white;
+          margin-left: 15px;
+            font-size: 18px;
+            height: 30px;
+            font-weight: bolder;
+            background-color: rgba(137, 43, 226, 0.814);
+            border-radius: 5px;
+            border: none;
+            transition: background-color 1s ;
+        }
+        .but:hover{
+            background-color: rgb(21, 5, 37);
+        }
+        #clr{
+            position: relative;
+            top: 40px;
+            left: 25px;
+            width: 130px;
+            height: 30px;
+            margin-left: 15px;
+            font-weight: bolder;
+            border-radius: 10px;
+            border: none;
+            background-color: rgba(0, 0, 0, 0.79);
+            font-size: 20px;
+            color: white;
+        }
+        #clr:hover{
+            background-color:  rgb(174, 103, 240);
+        }
+        #eql{
+            position: relative;
+            top: -9px;
+            left: 185px;
+            width: 130px;
+            font-weight: bolder;
+            background-color: blueviolet;
+            height: 30px;
+            border-radius: 10px;
+            color: white;
+            font-size: 20px;
+             border: none;
+             background-color: rgba(0, 0, 0, 0.79);
+        }
+        #eql:hover{
+            background-color:  rgb(174, 103, 240);
+        }
+        #bg1{
+            /* background-color: chartreuse; */
+            position: relative;
+            left: 270px;
+            top: -150px;
+            width: 320px;
+            height: 150px;
+            font-size: 70px;
+            color: rgba(106, 248, 255, 0.646);
+            z-index: 1;
+        }
+        #bg2{
+            /* background-color: chartreuse; */
+            position: relative;
+            /* float: left; */
+            left: 540px;
+            width: 420px;
+            top: -392px;
+            height: 150px;
+            font-size: 70px;
+            color:rgb(106, 248, 255);
+            z-index: 2;
+        }
+       
+    </style>
+</head>
+<body>
+    <div id="container">
+        <form action="" name="cform">
+            <input type="text" name="answer" id="topbox">
+            <br><br>
+            <input class="but" type="button" value="1" onclick="cform.answer.value +='1'">
+            <input class="but" type="button" value="2" onclick="cform.answer.value +='2'">
+            <input class="but" type="button" value="3" onclick="cform.answer.value +='3'">
+            <input class="but" id="op" type="button" value="+" onclick="cform.answer.value +='+'">
+            <br><br>
+            <input   class="but"  type="button" value="4" onclick="cform.answer.value +='4'">
+            <input   class="but" type="button" value="5" onclick="cform.answer.value +='5'">
+            <input   class="but" type="button" value="6" onclick="cform.answer.value +='6'">
+            <input   class="but" id="op"  type="button" value="-" onclick="cform.answer.value +='-'">
+            <br><br>
+            <input  class="but" type="button" value="7" onclick="cform.answer.value +='7'">
+            <input  class="but" type="button" value="8" onclick="cform.answer.value +='8'">
+            <input  class="but" type="button" value="9" onclick="cform.answer.value +='9'">
+            <input  class="but" id="op"  type="button" value="*" onclick="cform.answer.value +='*'">
+            <br><br>
+            <input  class="but" type="button" value="0" onclick="cform.answer.value +='0'">
+            <input  class="but" type="button" value="." onclick="cform.answer.value +='.'">
+            <input  class="but" id="op"  type="button" value="%" onclick="cform.answer.value +='%'">
+            <input  class="but" id="op"  type="button" value="/" onclick="cform.answer.value +='/'">
+            <br><br>
+            <input id="clr" type="button" value="Clear" onclick="cform.answer.value =' '">
+            <br><br>
+            <input id="eql" type="button" value="=" onclick="cform.answer.value=eval(cform.answer.value)">
+        </form>
+ </div>
+ <div id="bg1">
+    <h1 id="calc" >Calc</h1>
+ </div>
+ <div id="bg2">
+    <h1 id="ulator" >ulator</h1>
+ </div>
+</body>
+</html>
